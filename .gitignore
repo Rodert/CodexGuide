@@ -1,0 +1,22 @@
+# Dependencies
+node_modules/
+
+# VuePress generated files
+src/.vuepress/.cache/
+src/.vuepress/.temp/
+src/.vuepress/dist/
+
+# Logs
+*.log
+logs/
+
+# Local environment files
+.env
+.env.local
+.env.*.local
+
+# OS and editor files
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
