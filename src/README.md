@@ -7,8 +7,8 @@ actions:
   - text: 从新手入门开始
     link: /learn/
     type: primary
-  - text: 按功能查阅
-    link: /learn/
+  - text: 注册领取 5 美元
+    link: https://api.chongplus.plus/
     type: default
 features:
   - title: 新手入门
