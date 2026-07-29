@@ -10,7 +10,7 @@ title: 推荐站点
 
 | 资源 | 适合做什么 | 入口 |
 | --- | --- | --- |
-| AI 画图 | 生成插图、产品图和页面配图 | [打开图像生成指南](https://platform.openai.com/docs/guides/image-generation) |
+| AI 在线画图 | 生成插图、产品图和页面配图 | [打开 AI 在线画图](https://app.codex-zh.com/) |
 | AI 视频 | 生成短视频和视频素材 | [打开 Sora](https://openai.com/sora/) |
 
 ## 编程与学习
