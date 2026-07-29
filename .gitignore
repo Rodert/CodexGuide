@@ -1,5 +1,9 @@
 # Dependencies
 node_modules/
+.pnpm-store/
+.pnpm-debug.log*
+.npm/
+.npmrc.local
 
 # VuePress generated files
 src/.vuepress/.cache/
@@ -8,14 +12,20 @@ src/.vuepress/dist/
 src/.vuepress/public/sitemap.xml
 src/.vuepress/public/robots.txt
 
+# Test and compiler output
+coverage/
+*.tsbuildinfo
+
 # Logs
 *.log
 logs/
 
 # Local environment files
 .env
+.env.*
 .env.local
 .env.*.local
+!.env.example
 
 # OS and editor files
 .DS_Store
