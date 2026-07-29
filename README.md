@@ -25,6 +25,15 @@ pnpm build
 pnpm clean
 ```
 
+## Cloudflare Pages 部署
+
+在 Cloudflare Pages 中连接仓库后，使用以下构建设置：
+
+- 构建命令：`pnpm build`
+- 构建输出目录：`src/.vuepress/dist`
+
+每次 push 都会触发 Cloudflare Pages 构建。构建开始时会自动生成 `sitemap.html`、标准的 `sitemap.xml` 与 `robots.txt`，新文章会自动收录到地图中并随部署上线。
+
 ## 项目结构
 
 ```text

@@ -2,7 +2,12 @@ import { readdir, readFile, writeFile } from "node:fs/promises";
 import { join } from "node:path";
 
 const sourceDir = join(process.cwd(), "src", "learn");
-const outputFile = join(process.cwd(), "src", "sitemap.md");
+const siteDir = join(process.cwd(), "src");
+const publicDir = join(siteDir, ".vuepress", "public");
+const htmlSitemapFile = join(siteDir, "sitemap.md");
+const xmlSitemapFile = join(publicDir, "sitemap.xml");
+const robotsFile = join(publicDir, "robots.txt");
+const siteUrl = "https://codex-zh.net";
 
 const sections = [
   { title: "新手入门", end: 12 },
@@ -40,7 +45,7 @@ for (const article of articles) {
   groups[sectionIndex].articles.push(article);
 }
 
-const content = [
+const htmlSitemap = [
   "---",
   "title: 网站地图",
   "description: CodexGuide 全部教程文章索引。",
@@ -62,5 +67,27 @@ const content = [
   ),
 ].join("\n");
 
-await writeFile(outputFile, content, "utf8");
-console.log(`已生成网站地图：${articles.length} 篇文章`);
+const urls = [
+  "/",
+  "/learn/",
+  "/sitemap.html",
+  ...articles.map(({ slug }) => `/learn/${slug}.html`),
+];
+
+const xmlSitemap = [
+  '<?xml version="1.0" encoding="UTF-8"?>',
+  '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">',
+  ...urls.map((url) => `  <url><loc>${siteUrl}${url}</loc></url>`),
+  "</urlset>",
+  "",
+].join("\n");
+
+const robots = ["User-agent: *", "Allow: /", `Sitemap: ${siteUrl}/sitemap.xml`, ""].join("\n");
+
+await Promise.all([
+  writeFile(htmlSitemapFile, htmlSitemap, "utf8"),
+  writeFile(xmlSitemapFile, xmlSitemap, "utf8"),
+  writeFile(robotsFile, robots, "utf8"),
+]);
+
+console.log(`已生成网站地图：${articles.length} 篇文章，${urls.length} 个 URL`);
