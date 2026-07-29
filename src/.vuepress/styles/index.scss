@@ -54,3 +54,66 @@ html[data-theme="dark"] .vp-sidebar .vp-sidebar-link.active {
   background: #451a03;
   color: #fcd34d;
 }
+
+.vp-footer {
+  padding: 0;
+  background: var(--vp-c-bg-elv);
+  border-top: 1px solid var(--vp-c-border);
+}
+
+.site-footer {
+  display: grid;
+  grid-template-columns: minmax(180px, 1fr) minmax(300px, 2fr) auto;
+  gap: 24px;
+  align-items: center;
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 28px 32px;
+  color: var(--vp-c-text-mute);
+  font-size: 0.9rem;
+  text-align: left;
+}
+
+.site-footer__brand {
+  display: grid;
+  gap: 4px;
+}
+
+.site-footer__brand strong {
+  color: var(--vp-c-text);
+  font-size: 1rem;
+}
+
+.site-footer__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 18px;
+  align-items: center;
+}
+
+.site-footer a {
+  color: var(--vp-c-text-mute);
+  text-decoration: none;
+}
+
+.site-footer a:hover {
+  color: var(--vp-c-accent);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.site-footer__meta {
+  white-space: nowrap;
+}
+
+@media (max-width: 719px) {
+  .site-footer {
+    grid-template-columns: 1fr;
+    gap: 18px;
+    padding: 24px;
+  }
+
+  .site-footer__links {
+    gap: 10px 16px;
+  }
+}
