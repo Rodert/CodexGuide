@@ -5,9 +5,10 @@
   "description": "面向小白的 Codex 中文使用教程",
   "type": "module",
   "scripts": {
-    "dev": "vuepress-vite dev src",
-    "build": "vuepress-vite build src",
-    "clean": "vuepress-vite dev src --clean-cache"
+    "generate:sitemap": "node scripts/generate-sitemap.mjs",
+    "dev": "pnpm generate:sitemap && vuepress-vite dev src",
+    "build": "pnpm generate:sitemap && vuepress-vite build src",
+    "clean": "pnpm generate:sitemap && vuepress-vite dev src --clean-cache"
   },
   "devDependencies": {
     "@vuepress/bundler-vite": "2.0.0-rc.30",

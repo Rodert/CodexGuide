@@ -6,7 +6,8 @@ export default hopeTheme({
   navbar,
   sidebar,
   toc: true,
-  footer: "CodexGuide | 面向小白的 Codex 中文使用教程",
+  footer:
+    'CodexGuide | 面向小白的 Codex 中文使用教程 | <a href="/sitemap.html">网站地图</a>',
   displayFooter: true,
   editLink: false,
   plugins: {
