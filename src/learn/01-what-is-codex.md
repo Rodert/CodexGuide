@@ -49,9 +49,9 @@ Codex 是 OpenAI 面向软件开发的 AI 编程 Agent。它可以在你授权�
 检查这个接口为什么返回 500，找到问题并修复。
 ```
 
-Codex 会结合项目中的实际文件和命令结果工作，而不只是根据一段描述给出通用答案。
+Codex 会结合项目中的实际文件和命令结果工作，而不只是根据一段描述给出通用答案。下面这张图概括了它的任务闭环、常见入口，以及它与 ChatGPT、Claude Code 的定位差异。
 
-<!-- MEDIA: diagram | file: images/getting-started/01-codex-task-loop.png | capture: 用“提出任务 → Codex 读取与执行 → 用户检查结果 → 继续修改”的简单闭环图说明首次使用流程 -->
+![Codex 的工作方式、四种使用入口及与 ChatGPT、Claude Code 的区别](/images/getting-started/01-codex-overview.png)
 
 ## 从回答问题到完成任务
 
