@@ -9,7 +9,9 @@ export default hopeTheme({
   footer:
     'CodexGuide | 面向小白的 Codex 中文使用教程 | <a href="/sitemap.xml">网站地图</a>',
   displayFooter: true,
-  editLink: false,
+  repo: "https://github.com/Rodert/CodexGuide",
+  editLink: true,
+  editLinkText: "在 GitHub 上编辑此页",
   plugins: {
     slimsearch: true,
   },
