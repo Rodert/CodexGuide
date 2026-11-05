@@ -23,6 +23,8 @@ features:
     link: /learn/
 ---
 
+教程网址：[https://codex-zh.net/](https://codex-zh.net/)
+
 ## 先完成第一次任务
 
 不要急着看完所有功能。跟着新手入门教程完成一个可预览的小网页，再按自己的工作需要学习功能、模板和实战场景。

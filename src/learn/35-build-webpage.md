@@ -10,11 +10,11 @@ title: 用 Codex 做一个网页
 
 准备 `codex-first-project`，先查看已有文件；如果已经做过入门练习，就在原页面上继续。
 
-若没有前面的作品，下载 [个人网页包](/examples/personal-page.zip)，解压后把包含 `index.html`、`style.css` 的那一层作为工作目录。先双击 HTML，看到“小林”和三条兴趣后再开始；参考效果也可 [直接打开](/examples/personal-page/index.html)。
+若没有前面的作品，下载 [个人网页包](/examples/personal-page.zip)，解压后把包含 `index.html`、`style.css` 的那一层作为工作目录。先双击 HTML，看到“小王”和三条兴趣后再开始；参考效果也可 [直接打开](/examples/personal-page/index.html)。
 
 ```text
 请完善当前个人介绍网页；如果目录为空，则创建 index.html 和 style.css。
-内容使用虚构信息：小林，兴趣为阅读、旅行、摄影。
+内容使用虚构信息：小王，兴趣为阅读、旅行、摄影。
 分为介绍、技能、作品、联系四个区域，作品使用三张文字卡片。
 只使用 HTML 和 CSS，不引入依赖、外部字体或图片。
 已有内容应保留。先说明计划，再实现并列出修改文件。

@@ -7,7 +7,7 @@ export default hopeTheme({
   sidebar,
   toc: true,
   footer:
-    'CodexGuide | 面向小白的 Codex 中文使用教程 | <a href="/sitemap.xml">网站地图</a>',
+    'CodexGuide | 面向小白的 Codex 中文使用教程 | <a href="https://codex-zh.net/">codex-zh.net</a> | <a href="/sitemap.xml">网站地图</a>',
   displayFooter: true,
   repo: "https://github.com/Rodert/CodexGuide",
   editLink: true,
