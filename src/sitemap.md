@@ -7,7 +7,7 @@ description: CodexGuide 全部教程文章索引。
 
 ## 新手入门
 
-- [认识 Codex](/learn/01-what-is-codex.html)
+- [认识 Codex：OpenAI Codex 是什么？和 ChatGPT、Claude Code 有什么区别？](/learn/01-what-is-codex.html)
 - [订阅与计费](/learn/02-pricing.html)
 - [选择使用方式](/learn/03-choose-surface.html)
 - [准备工作](/learn/04-prepare.html)

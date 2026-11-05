@@ -14,11 +14,15 @@ title: 安装桌面 App
 
 ## 操作步骤
 
-1. 从 OpenAI 官方下载页安装 Codex 桌面 App。
+1. 从 [Codex 官方 App 说明](https://developers.openai.com/codex/app/) 查找下载入口，确认当前安装包支持你的系统和处理器，再按照系统提示安装。
 2. 打开 App，按提示登录。
 3. 进入新建项目或新建对话入口，不要立刻在真实工作目录里运行任务。
 
 <!-- MEDIA: screenshot | file: images/getting-started/05-codex-app-sign-in.png | capture: Codex 桌面 App 的登录或新建项目入口，不包含账号邮箱和个人信息 -->
+
+能打开主界面、找到创建任务或选择项目的入口，并且账户显示正确，就完成了本节。暂时不用为了体验而授予所有目录权限。
+
+如果系统没有适合的安装包，可改用 [CLI](./14-cli.md) 或 [VS Code](./15-vscode.md) 跟练。系统安全提示要先读清原因，公司设备的限制则需要管理员确认。
 
 ## 常见问题
 
@@ -26,4 +30,4 @@ title: 安装桌面 App
 
 ## 下一步
 
-继续阅读：[完成第一个任务](./07-first-task.md)。
+继续阅读：[桌面 App 界面](./06-app-overview.md)。

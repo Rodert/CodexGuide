@@ -56,12 +56,3 @@ Codex 处理任务时，可能需要读取文件、写入文件、运行命令�
 ## 参考资料
 
 - [OpenAI Codex 安全与审批说明](https://developers.openai.com/codex/agent-approvals-security)
-## 适合谁
-
-## 开始前
-
-## 操作步骤
-
-## 常见问题
-
-## 下一步

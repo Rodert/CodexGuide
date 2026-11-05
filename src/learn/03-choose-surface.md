@@ -79,8 +79,3 @@ Cloud 适合把任务交给远程环境执行、跟进任务状态或处理与�
 ## 参考资料
 
 - [OpenAI Codex 文档](https://developers.openai.com/codex/)
-## 操作步骤
-
-## 常见问题
-
-## 下一步

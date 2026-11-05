@@ -75,12 +75,3 @@ title: 怎样提需求
 ## 参考资料
 
 - [OpenAI Codex 文档](https://developers.openai.com/codex/)
-## 适合谁
-
-## 开始前
-
-## 操作步骤
-
-## 常见问题
-
-## 下一步
