@@ -17,6 +17,8 @@ codex --help
 
 若提示命令不存在，检查安装是否成功，并在安装后重新打开终端。macOS、Linux 等常见 shell 可以用 `command -v codex` 查位置；PowerShell 可以用 `Get-Command codex`。
 
+先单独执行 `codex --version`，预期会显示已安装版本，而不是进入项目任务。若出现 `command not found` 或“无法识别”，还没到账号登录这一步；若版本能显示，再用 `codex --help` 检查命令本身是否工作。
+
 不要复制其他电脑的绝对路径添加到环境变量。应核对你自己机器的安装位置，以及终端实际使用的环境。
 
 ## 命令能运行，但任务失败
@@ -29,6 +31,8 @@ codex --help
 | 长时间无响应 | 检查是否等待输入、网络或子进程 |
 
 能启动 Codex，只能证明 CLI 可运行，不能证明项目依赖也已装好。
+
+如果使用 JavaScript 练习包，再在项目目录运行 `node --version` 和 `npm test`。`node` 找不到属于运行时准备问题；`package.json` 找不到先看目录；测试出现断言失败才继续看业务行为。每次只处理最先失败的一层。
 
 ## 怎样提供有效报错
 

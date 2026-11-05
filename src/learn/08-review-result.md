@@ -19,7 +19,13 @@ title: 检查任务结果
 3. 检查姓名和三条兴趣是否正确，样式是否加载；缩窄窗口，观察文字和按钮是否遮挡。
 4. 检查联系按钮的链接是否为 `mailto:hello@example.com`。没有配置邮件应用时，不一定能直接打开写信窗口。
 
-<!-- MEDIA: screenshot | file: images/getting-started/08-preview-page.png | capture: 浏览器中打开生成网页后的预览结果，不使用真实个人信息 -->
+下面是练习包的实际宽屏预览。自己生成的布局可以不同，先对照姓名、兴趣和按钮是否齐全。
+
+![个人介绍网页的实际宽屏预览](/images/getting-started/08-preview-page.png)
+
+将浏览器切换到窄屏预览后，也应保持内容完整。下面是同一页面在 375 像素宽度下的实际效果：
+
+![个人介绍网页的 375 像素窄屏预览](/images/getting-started/08-preview-page-mobile.png)
 <!-- MEDIA: screenshot | file: images/getting-started/08-review-diff.png | capture: Codex 的文件改动或 Diff 视图，展示如何检查修改 -->
 
 Diff 就是文件新旧版本的差异。看改动时，先确认文件路径，再看增加、删除的具体内容，而不是只看颜色或 Codex 的总结。
@@ -34,6 +40,10 @@ Diff 就是文件新旧版本的差异。看改动时，先确认文件路径，
 ```
 
 刷新页面，对照检查两处变化，确认姓名、兴趣和链接仍然存在。如果结果不对，说明“预期是什么、实际是什么”，让 Codex 修正具体差异。
+
+可以用一句话记录结果：“背景已变浅、按钮已变蓝，原有姓名、兴趣和链接仍在”。如果没有变化，先核对浏览器打开的文件路径，再刷新；不要立刻让 Codex 重新生成整个网页。
+
+**看不到样式时：** 确认 `index.html` 和 `style.css` 已保存且在同一目录，HTML 引用的文件名也一致。完整排错练习见 [用 Codex 修复报错](./36-fix-bug.md)。
 
 ## 常见问题
 

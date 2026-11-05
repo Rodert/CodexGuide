@@ -31,6 +31,17 @@ git commit -m "创建个人介绍网页"
 
 `git diff --cached` 显示即将提交的内容。首次提交若提示缺少姓名和邮箱，先按 Git 的提示配置身份；不要把别人的身份照抄进去。
 
+只为当前练习仓库配置时，可在该目录运行下面两条命令，先把引号里的内容换成自己的提交身份，再重新执行 `git commit`：
+
+```bash
+git config user.name "你的显示名"
+git config user.email "你的提交邮箱"
+```
+
+邮箱会写入提交记录；需要保护私人邮箱时，使用 GitHub 账户提供的提交隐私邮箱。这里不用 `--global`，避免顺手改掉其他项目的身份设置。
+
+这些命令在练习目录内运行，不是在 Codex 的聊天输入区。提交成功通常会显示提交摘要；再运行 `git log -1 --oneline`，应该能看到刚写的说明。用 `git status` 检查是否还有未保存到版本里的文件。
+
 ## 让 Codex 协助提交
 
 ```text
@@ -43,6 +54,20 @@ git commit -m "创建个人介绍网页"
 ## 什么时候推送
 
 先创建或确认远程仓库，用 `git remote -v` 检查目标，再确认当前分支和仓库可见性。远程连接、账号认证设置好后，再让 Codex 推送明确的分支。
+
+第一次上传独立练习项目，可以这样做：
+
+1. 在自己的 GitHub 账户创建空仓库 `codex-first-project`，选择合适可见性，不预先生成 README，避免产生另一段初始历史。
+2. 复制仓库给出的 HTTPS 或 SSH 地址。在本地先检查 `git remote -v`；仅在没有远程且确定是这个新练习仓库时添加。
+3. 按下面示例替换账户名，再依次执行。现有团队仓库不要照此改分支或远程。
+
+```bash
+git branch -M main
+git remote add origin https://github.com/YOUR_NAME/codex-first-project.git
+git push -u origin main
+```
+
+`YOUR_NAME` 必须换成你的 GitHub 用户名。推送需要有效认证，按可信客户端或 GitHub 的提示完成，不把令牌贴到聊天里。若提示远程已存在或历史冲突，先检查原因，不直接强制推送。
 
 **完成检查：** 用 `git log -1` 能看到刚才的本地提交。上传之后，还要检查远程是否出现该提交。
 

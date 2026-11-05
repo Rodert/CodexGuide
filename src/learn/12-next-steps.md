@@ -8,11 +8,15 @@ title: 下一步怎么学
 
 ## 我想继续写代码
 
+先用三个问题检查入门练习是否完成：能找到生成文件吗？能打开网页吗？能提出一轮修改并确认结果吗？若还不能，回到 [第一个任务](./07-first-task.md) 和 [检查结果](./08-review-result.md)，不必急着进入配置章节。
+
 - 常用终端：阅读 [Codex CLI](./14-cli.md)。
 - 常用编辑器：阅读 [VS Code 中使用 Codex](./15-vscode.md)。
 - 已有项目：阅读 [项目、对话与工作目录](./17-projects.md)。
 
 ## 我想把 Codex 用得更稳
+
+练习材料可以接着复用：网页章节使用 [个人网页包](/examples/personal-page.zip)；测试、重构和 CI 章节使用 [JavaScript 练习包](/examples/js-practice.zip)。后者需要 Node.js，准备方法见 [补测试模板](./45-add-tests.md)。两套练习分开解压，不要混在同一个目录。
 
 - 给项目写固定规则：阅读 [AGENTS.md](./18-agents-md.md)。
 - 了解配置项：阅读 [config.toml](./19-config-toml.md)。

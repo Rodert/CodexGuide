@@ -22,6 +22,41 @@ title: 补测试模板
 
 ## 什么是有意义的用例
 
+先做一个无需第三方测试框架的练习。下载 [JavaScript 练习包](/examples/js-practice.zip)，解压到独立目录；从 [Node.js 官网](https://nodejs.org/) 安装 22 或更高版本。在该目录打开终端，先运行 `node --version`，再运行 `npm test`。初始预期为 1 个通过、0 个失败，且无需安装依赖。
+
+把模板中的模块填写为 `tasks.js`，说明“只有 done 严格等于 true 算完成，缺少 done 算待完成，统计不修改输入”。然后要求 Codex 补充空数组、全部完成、非布尔值和输入不变的测试。
+
+看不懂测试时，可以先手动在现有 `tasks.test.js` 末尾追加下面四条；文件开头已有 `test`、`assert` 和两个函数的导入，不要重复粘贴导入行：
+
+```javascript
+test('空数组的两种计数都是零', () => {
+  assert.equal(countCompleted([]), 0);
+  assert.equal(countPending([]), 0);
+});
+
+test('全部完成时没有待完成任务', () => {
+  const tasks = [{ done: true }, { done: true }];
+  assert.equal(countCompleted(tasks), 2);
+  assert.equal(countPending(tasks), 0);
+});
+
+test('只有布尔值 true 算完成', () => {
+  const tasks = [{ done: true }, { done: 'true' }, {}];
+  assert.equal(countCompleted(tasks), 1);
+  assert.equal(countPending(tasks), 2);
+});
+
+test('统计不改变输入', () => {
+  const tasks = [{ done: false }, { done: true }];
+  const before = structuredClone(tasks);
+  countCompleted(tasks);
+  countPending(tasks);
+  assert.deepEqual(tasks, before);
+});
+```
+
+保存后再次执行 `npm test`。按本页追加四条后，应为 5 个通过、0 个失败。`assert.equal` 是比较实际值与预期值；`deepEqual` 用来比较结构内容。失败时先读失败用例名和实际/预期差异，不要把预期值改成错误结果。
+
 例如验证注册接口：合法输入成功、重复账号被拒绝、缺失必要字段有明确错误。只检查“函数被调用一次”，可能没有覆盖用户真正关心的结果。
 
 回归测试应该能捕获已知 Bug。不要把当前实现的错误结果照抄为预期，也不要只断言输出“存在”。

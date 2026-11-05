@@ -22,6 +22,8 @@ git worktree list
 
 在 Codex 中选择新目录，确认目录和分支，再执行布局练习。
 
+预期 `git worktree list` 会列出原目录和新目录。先确认原网页已经提交，再在新目录只改页面标题；分别打开两个目录中的 `index.html`，应该能看到不同标题。若新目录缺少原来的网页，先检查是否创建于包含网页的提交，不要从其他目录盲目覆盖文件。
+
 ## 它隔离什么，不隔离什么
 
 两个工作目录的文件改动分开，但仍属于同一个 Git 仓库。未提交改动不会因为新建 worktree 自动复制过去；依赖、环境文件和本地服务也可能需要单独准备。
@@ -37,5 +39,7 @@ git worktree remove ../codex-layout-practice
 ```
 
 如果提示目录不干净，先处理未保存内容，不要直接使用强制参数。删除 worktree 也不等于删除对应分支。
+
+移除后再运行 `git worktree list`，列表中应只保留仍然使用的目录。这里的新工作目录放在仓库旁边，不是在原目录内创建另一个嵌套仓库。
 
 官方参考：[Git worktree](https://git-scm.com/docs/git-worktree)。下一节：[Git 与 GitHub](./31-git-github.md)。
