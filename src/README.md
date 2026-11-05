@@ -7,9 +7,10 @@ actions:
   - text: 从新手入门开始
     link: /learn/
     type: primary
-  - text: 注册领取 5 美元
-    link: https://api.chongplus.plus/
-    type: default
+  # 暂时隐藏注册优惠入口，需要时取消以下注释。
+  # - text: 注册领取 5 美元
+  #   link: https://api.chongplus.plus/
+  #   type: default
 features:
   - title: 新手入门
     details: 从安装、登录到完成第一个任务，按步骤跟着做即可。
